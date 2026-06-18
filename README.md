@@ -21,15 +21,12 @@ https://github.com/user-attachments/assets/output-2.mp4
 | Scene | Mode | Detection |
 |-------|------|-----------|
 | 0–7s | **SWARM** | 15–20 hammerhead sharks via 4×3 tiled inference |
-| 7–15s | **SINGLE** | 1 oceanic whitetip + pilot fish via 3-pass pipeline |
 
 ---
 
 ## How It Works
 
 - **SWARM mode** — splits each 4K frame into a 4×3 grid of tiles, runs YOLOv26 inference on all 12 tiles + a full-image bonus pass. Catches faint background sharks missed by single-pass.
-- **SINGLE mode** — 3-pass pipeline: full image → shark crop zoom → belly-region tiles (3× upscale) to catch small pilot fish.
-- **Auto scene switching** — hardcoded transition at frame 168 (7s mark) for perfect mode accuracy.
 - **Interpolation** — detections inferred every 6 frames, linearly interpolated between keyframes for smooth bounding boxes.
 - **CLAHE enhancement** — contrast boost to cut through underwater blue cast before inference.
 
