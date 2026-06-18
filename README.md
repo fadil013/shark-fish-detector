@@ -7,7 +7,10 @@ Real-time shark and fish detection in 4K underwater footage using **YOLOv26** vi
 ## Demo
 
 ### Output Video
-https://github.com/user-attachments/assets/output-2.mp4
+
+<video src="https://github.com/fadil013/shark-fish-detector/raw/master/output%202.mp4" controls width="100%"></video>
+
+> Can't see the player? [Click here to download/watch](https://github.com/fadil013/shark-fish-detector/raw/master/output%202.mp4)
 
 ### Detection — Input vs Output
 | Original | Detected |
